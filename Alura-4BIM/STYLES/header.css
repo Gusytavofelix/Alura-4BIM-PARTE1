@@ -1,0 +1,62 @@
+/* Cabeçalho */
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 2em; /* Aumentando o espaçamento para deixar o cabeçalho mais espaçoso */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para dar profundidade */
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: var(--branco);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    border-radius: var(--bordas); /* Bordas arredondadas */
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--azul);
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.lista-menu__item {
+    padding: 1em;
+    border-bottom: 1px solid var(--azul-claro);
+}
+
+.lista-menu__item:last-child {
+    border-bottom: none;
+}
+
+.lista-menu__link {
+    color: var(--azul-degrade);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: block;
+    padding: 0.8em;
+    transition: color 0.3s ease;
+}
+
+.lista-menu__link:hover {
+    color: var(--laranja); /* Cor de destaque no hover */
+}
